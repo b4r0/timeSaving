@@ -7,7 +7,7 @@ import javax.inject.Named;
 
 import it.unifi.swa.domain.User;
 
-//prova modifica
+//ho modificato
 @SessionScoped
 @Named
 public class UserSessionBean implements Serializable {
