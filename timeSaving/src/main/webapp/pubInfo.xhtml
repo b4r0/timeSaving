@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head >
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <title>Pub Info</title>
+
+        <ui:define name="js">
+            <script type="text/javascript"
+                    src="https://maps.googleapis.com/maps/api/js?sensor=true">
+            </script>
+        </ui:define>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form xmlns:m="http://code.google.com/p/gmaps4jsf/">
+                <h:outputText value="#{selectPubController.selectedPub.nome}"></h:outputText>
+                
+                <m:map zoom="16" width="500px" height="500px" address="White house">
+                    <m:mapControl name="GLargeMapControl" position="G_ANCHOR_BOTTOM_LEFT" />
+                    <m:mapControl name="GMapTypeControl" />
+                    <m:htmlInformationWindow htmlText="White house"></m:htmlInformationWindow>
+                </m:map>
+            </h:form>
+        </f:view>
+    </h:body>
+
+</html>
