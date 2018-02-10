@@ -36,6 +36,9 @@ public class StartupBean {
 	
 	@Inject
 	ProductDAO productDao;
+        
+        @Inject
+	PubDAO pub;
 	
 //	@PersistenceContext
 //	EntityManager entityManager;
@@ -84,10 +87,35 @@ public class StartupBean {
 		panino.setPrice(5);
 		panino.setTpProduct('f');
 		panino.setMenu(menu);
+                
+                Pub pub=new Pub();
+                pub.setIdLocale(1);
+                pub.setIndirizzo("Via la polizia 69");
+                pub.setNome("Beautiful Pub");
+                
+                Pub pub2=new Pub();
+                pub2.setIdLocale(2);
+                pub2.setIndirizzo("Via di qui 22");
+                pub2.setNome("Pub Rivederci");
+                
+                Pub pub3=new Pub();
+                pub3.setIdLocale(3);
+                pub3.setIndirizzo("Via verdi 59");
+                pub3.setNome("Pub Lo Picasso");
+                
+                Pub pub4=new Pub();
+                pub4.setIdLocale(4);
+                pub4.setIndirizzo("Via kal 124");
+                pub4.setNome("Pub Rivederci");
 		
 		menuDao.save(menu);
 		productDao.save(negroni);
 		productDao.save(panino);
+                pubDao.save(pub);
+                pubDao.save(pub2);
+                pubDao.save(pub3);
+                pubDao.save(pub4);
+                
     }
  
 //    @PreDestroy
