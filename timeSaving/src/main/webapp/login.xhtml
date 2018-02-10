@@ -12,13 +12,13 @@
             <h:form>
                 <h:panelGroup>
                     <h:panelGrid>
-                        <h:outputLabel value="Username" />
-                        <h:inputText value="#{loginController.username}"></h:inputText>
-                        <h:outputLabel value="Password" />
-                        <h:inputText value="#{loginController.password}"></h:inputText>
+                        <h:outputLabel value="Username" style="color: cadetblue" />
+                        <h:inputText value="#{loginController.username}"/>
+                        <h:outputLabel value="Password" style="color: cadetblue" />
+                        <h:inputText value="#{loginController.password}"/>
                         <h:commandButton action="#{loginController.login}" value="Login" /> 
                     </h:panelGrid>
-                    No account?<h:link value="Sign in" outcome="register" />
+                    No account? <h:link value="Sign in" outcome="register" />
                 </h:panelGroup>
             </h:form>
         </f:view>

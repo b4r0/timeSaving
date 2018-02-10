@@ -22,10 +22,12 @@ import org.hibernate.annotations.LazyCollectionOption;
 @Entity
 public class Pub {
 
+
 	private int idLocale;
 	private long partitaIva;
 	private String nome;
 	private String indirizzo;
+        private String descrizione;
 	
 	private Menu menu;
 	private List<Ordine> orders;
@@ -58,6 +60,13 @@ public class Pub {
 	public void setPartitaIva(long partitaIva) {
 		this.partitaIva = partitaIva;
 	}
+        public String getDescrizione() {
+            return descrizione;
+        }
+
+        public void setDescrizione(String descrizione) {
+            this.descrizione = descrizione;
+        }
 	
 	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="menu_FK")	
