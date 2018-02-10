@@ -13,8 +13,8 @@
                 <ui:repeat value="#{selectPubBean.pubList}" var="pub" varStatus="status">
                     <h:panelGrid columns="4" cellpadding="2" border="1">
                         <h:panelGroup>
-                            <h:commandLink value="#{pub.nome}" action="#{selectPubController.select}">
-                                
+                            <h:commandLink value="#{pub.nome}" action="#{selectPubController.select()}">
+                                <f:setPropertyActionListener value="#{pub}" target="#{selectPubController.selectedPub}" />
                             </h:commandLink>
                         </h:panelGroup>
                         <h:panelGroup>
